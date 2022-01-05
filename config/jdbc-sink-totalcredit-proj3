@@ -1,0 +1,14 @@
+name=jdbc-sink-totalcredit-proj3
+tasks.max=1
+connector.class=io.confluent.connect.jdbc.JdbcSinkConnector
+connection.url=jdbc:postgresql://database:5432/kafkadb
+connection.user=postgres
+connection.password=My01pass
+dialect.name=org.hibernate.dialect.PostgreSQL9Dialect
+insert.mode=upsert
+topics=totalCredits
+auto.create=true
+key.converter=org.apache.kafka.connect.storage.StringConverter
+value.converter=org.apache.kafka.connect.json.JsonConverter
+key.converter.schemas.enable=true
+value.converter.schemas.enable=true

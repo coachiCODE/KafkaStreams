@@ -1,0 +1,10 @@
+name=jdbc-source-proj3
+connector.class=io.confluent.connect.jdbc.JdbcSourceConnector
+connection.url=jdbc:postgresql://database:5432/kafkadb
+connection.user=postgres
+connection.password=My01pass
+dialect.name=org.hibernate.dialect.PostgreSQL9Dialect
+mode=bulk
+query=SELECT * FROM currency;
+poll.interval.ms=100;
+topic.prefix=InfoCurrency
